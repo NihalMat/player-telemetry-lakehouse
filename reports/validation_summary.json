@@ -1,0 +1,64 @@
+{
+  "events": 1000000,
+  "valid_events": 1000000,
+  "invalid_events": 0,
+  "duplicate_event_ids": 0,
+  "players": 19998,
+  "sessions": 175678,
+  "category_counts": {
+    "business": 3080,
+    "design": 54912,
+    "error": 2096,
+    "impression": 61526,
+    "progression": 351354,
+    "resource": 175677,
+    "session_end": 175677,
+    "user": 175678
+  },
+  "d1_retention_percent": 64.88,
+  "d7_retention_percent": 50.17,
+  "d30_retention_percent": 35.31,
+  "error_session_rate_percent": 1.19,
+  "revenue_usd": 13863.2,
+  "privacy_groups_suppressed": 0,
+  "privacy_threshold": 20,
+  "hardest_levels": [
+    {
+      "level": "level_40",
+      "starts": 295,
+      "completions": 128,
+      "completion_rate": 43.39
+    },
+    {
+      "level": "level_37",
+      "starts": 476,
+      "completions": 211,
+      "completion_rate": 44.33
+    },
+    {
+      "level": "level_38",
+      "starts": 367,
+      "completions": 163,
+      "completion_rate": 44.41
+    },
+    {
+      "level": "level_39",
+      "starts": 298,
+      "completions": 138,
+      "completion_rate": 46.31
+    },
+    {
+      "level": "level_36",
+      "starts": 539,
+      "completions": 270,
+      "completion_rate": 50.09
+    }
+  ],
+  "sample_hashed_player_keys": [
+    "1df3340250b77149465505519ad5c074a22b3bee2cc7fcdb3b28fc58d4acf24f",
+    "1df3340250b77149465505519ad5c074a22b3bee2cc7fcdb3b28fc58d4acf24f",
+    "1df3340250b77149465505519ad5c074a22b3bee2cc7fcdb3b28fc58d4acf24f",
+    "1df3340250b77149465505519ad5c074a22b3bee2cc7fcdb3b28fc58d4acf24f",
+    "1df3340250b77149465505519ad5c074a22b3bee2cc7fcdb3b28fc58d4acf24f"
+  ]
+}

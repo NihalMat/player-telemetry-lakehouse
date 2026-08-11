@@ -1,0 +1,64 @@
+{
+  "events": 5000,
+  "valid_events": 5000,
+  "invalid_events": 0,
+  "duplicate_event_ids": 0,
+  "players": 413,
+  "sessions": 888,
+  "category_counts": {
+    "business": 21,
+    "design": 269,
+    "error": 11,
+    "impression": 263,
+    "progression": 1774,
+    "resource": 887,
+    "session_end": 887,
+    "user": 888
+  },
+  "d1_retention_percent": 21.07,
+  "d7_retention_percent": 13.8,
+  "d30_retention_percent": 15.23,
+  "error_session_rate_percent": 1.24,
+  "revenue_usd": 53.79,
+  "privacy_groups_suppressed": 192,
+  "privacy_threshold": 20,
+  "hardest_levels": [
+    {
+      "level": "level_10",
+      "starts": 23,
+      "completions": 18,
+      "completion_rate": 78.26
+    },
+    {
+      "level": "level_23",
+      "starts": 20,
+      "completions": 16,
+      "completion_rate": 80.0
+    },
+    {
+      "level": "level_06",
+      "starts": 35,
+      "completions": 29,
+      "completion_rate": 82.86
+    },
+    {
+      "level": "level_03",
+      "starts": 90,
+      "completions": 75,
+      "completion_rate": 83.33
+    },
+    {
+      "level": "level_05",
+      "starts": 54,
+      "completions": 46,
+      "completion_rate": 85.19
+    }
+  ],
+  "sample_hashed_player_keys": [
+    "772db610dfee9637b64775a9f676e75784d4f34144a95f20c42d054090e08bb5",
+    "772db610dfee9637b64775a9f676e75784d4f34144a95f20c42d054090e08bb5",
+    "772db610dfee9637b64775a9f676e75784d4f34144a95f20c42d054090e08bb5",
+    "772db610dfee9637b64775a9f676e75784d4f34144a95f20c42d054090e08bb5",
+    "772db610dfee9637b64775a9f676e75784d4f34144a95f20c42d054090e08bb5"
+  ]
+}

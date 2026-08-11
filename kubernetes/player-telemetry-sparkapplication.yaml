@@ -1,0 +1,42 @@
+apiVersion: sparkoperator.k8s.io/v1beta2
+kind: SparkApplication
+metadata:
+  name: player-telemetry-ingest
+  namespace: data-platform
+spec:
+  type: Scala
+  mode: cluster
+  image: ghcr.io/nihalmat/player-telemetry-lakehouse:0.1.0
+  imagePullPolicy: IfNotPresent
+  mainClass: com.nihal.games.jobs.IngestGameEvents
+  mainApplicationFile: local:///opt/spark/jobs/player-telemetry-lakehouse-assembly-0.1.0.jar
+  sparkVersion: 3.5.2
+  restartPolicy:
+    type: OnFailure
+    onFailureRetries: 3
+    onFailureRetryInterval: 10
+  sparkConf:
+    spark.sql.adaptive.enabled: "true"
+    spark.serializer: org.apache.spark.serializer.KryoSerializer
+  driver:
+    cores: 1
+    memory: 2g
+    serviceAccount: spark
+    env:
+      - name: KAFKA_BOOTSTRAP_SERVERS
+        value: kafka.data-platform.svc.cluster.local:9092
+      - name: GAME_EVENT_TOPIC
+        value: gameplay-events
+      - name: ICEBERG_WAREHOUSE
+        value: hdfs://namenode.data-platform.svc.cluster.local:9000/warehouse/player-analytics
+      - name: CHECKPOINT_LOCATION
+        value: hdfs://namenode.data-platform.svc.cluster.local:9000/checkpoints/game-events
+      - name: PLAYER_HASH_SALT
+        valueFrom:
+          secretKeyRef:
+            name: player-analytics-secrets
+            key: player-hash-salt
+  executor:
+    instances: 3
+    cores: 2
+    memory: 4g

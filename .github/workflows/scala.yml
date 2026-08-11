@@ -1,0 +1,20 @@
+name: Scala validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: sbt
+      - uses: sbt/setup-sbt@v1
+      - run: sbt test
+      - run: python tools/generate_synthetic_events.py --output sample/ci-events.jsonl --players 500 --days 40 --events 25000
+      - run: python tools/validate_metrics.py --input sample/ci-events.jsonl --report reports/ci-validation.md

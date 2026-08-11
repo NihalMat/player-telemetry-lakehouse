@@ -1,0 +1,9 @@
+target/
+project/target/
+project/project/
+.idea/
+.vscode/
+.DS_Store
+*.log
+.env
+checkpoints/
