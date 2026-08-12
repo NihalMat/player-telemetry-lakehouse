@@ -2,7 +2,7 @@
 
 A Scala and Spark portfolio project for privacy-conscious gameplay telemetry. The platform accepts a GameAnalytics-style event contract through Kafka, stores replayable history in Apache Iceberg using a Hadoop catalog and HDFS, calculates player and release metrics, and publishes compact aggregates to Cassandra.
 
-All data is synthetic. The repository contains no Apple, employer, customer, or personal data. It demonstrates a reference architecture and does not claim production work for a game studio.
+All data is synthetic. The repository contains no company, customer, or personal data. It demonstrates a reference architecture and does not claim production work for a game studio.
 
 ## What the platform measures
 
