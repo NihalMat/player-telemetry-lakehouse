@@ -53,7 +53,7 @@ The schema follows the documented GameAnalytics event categories:
 - error
 - ad and impression
 
-A separate mapping explains how the canonical model relates to GameAnalytics, PlayFab Telemetry, Unity Analytics, and Apple App Store Connect metrics without claiming a live vendor integration.
+A separate mapping explains how the canonical model relates to GameAnalytics, PlayFab Telemetry, Unity Analytics, and App Store Connect metrics without claiming a live vendor integration.
 
 See [docs/third_party_analytics_mapping.md](docs/third_party_analytics_mapping.md).
 
@@ -143,7 +143,7 @@ Runtime locations and credentials are supplied through environment variables. Se
 
 ## Scope
 
-This is a portfolio reference implementation. It has not been benchmarked at Apple scale and does not include a production game client SDK, authentication service, dashboard frontend, or infrastructure-as-code deployment.
+This is a portfolio reference implementation. It does not include a production game client SDK, authentication service, dashboard frontend, or infrastructure-as-code deployment.
 
 ## Technical references
 
